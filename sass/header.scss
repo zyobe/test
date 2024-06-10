@@ -1,17 +1,18 @@
 .header {
-  // max-width: 1410px;
+  background: #fff;
   padding: 0 20px;
+  position: sticky;
   margin: 0 auto;
+  top: 0;
+  z-index: 3;
 
   &--active-navigation {
-    @media screen and (max-width: 767px) {
+
+    @include mobile-only {
       background: #002c5a;
       padding-top: 10px;
-    }
-  }
+   }
 
-  &__logo--monochrome {
-    display: none;
   }
 
   &--active-navigation &__logo--monochrome,
@@ -20,6 +21,8 @@
     display: block;
   }
 
+  &__logo--monochrome,
+  &__search-form,
   &--active-navigation &__logo--colour,
   &--active-navigation &__search-button,
   &--active-navigation &__navigation-button--open {
@@ -28,46 +31,39 @@
 
   &--active-navigation &__interactions,
   &--active-navigation &__content {
-    @media screen and (max-width: 767px) {
+    @include mobile-only {
       display: block;
     }
   }
 
   &--active-navigation &__navigation {
-    @media screen and (max-width: 767px) {
+    @include mobile-only {
       position: absolute;
-      top: 0;
       right: 0;
+      top: 0;
     }
   }
 
   &--active-navigation &__interactions {
-    @media screen and (max-width: 767px) {
+    @include mobile-only {
       margin-top: 10px;
     }
   }
 
   &__content {
     align-items: center;
-    // background-color: green;
     display: flex;
-    // left: 0;
     height: 150px;
     justify-content: space-between;
-    // position: fixed;
-    position: sticky;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 3;
-
-    max-width: 1210px;
-    width: 100%;
     margin: 0 auto;
+    max-width: 1210px;
+    position: relative;
+    width: 100%;
+    z-index: 3;
   }
 
   &__logo {
-    @media screen and (min-width: 768px) {
+    @include tablet-desktop {
       height: 70px;
       width: 228px;
     }
@@ -80,30 +76,26 @@
   }
 
   &__search-button {
-    // background-color: #fff;
+    background: url(#{$asset-path}/Shape.svg) #fff no-repeat center;
     border: 1px solid #002c5a;
-    background: url(#{$asset-path}/Shape.svg) #fff no-repeat center center;
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    @media screen and (min-width: 768px) {
+
+    @include tablet-desktop {
       height: 60px;
       width: 60px;
     }
-  }
 
-  &__search-form {
-    display: none;
   }
 
   &__search-input {
-    padding: 20px;
-    width: 339px;
-    height: 60px;
     background: url(#{$asset-path}/Shape.svg) #fff no-repeat right 20px bottom 20px;
     border: none;
     border-radius: 30px;
-    border: 1px solid #002c5a;
+    height: 60px;
+    padding: 20px;
+    width: 339px;
   }
 
   &__navigation-button {
@@ -112,7 +104,8 @@
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    @media screen and (min-width: 768px) {
+    
+    @include tablet-desktop {
       height: 60px;
       width: 60px;
     }

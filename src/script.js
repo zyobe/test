@@ -1,13 +1,22 @@
 $(document).ready(function () {
-  console.log('xxxxx')
 
-  $('.js-navigation-button-open').on('click', function() {
-    $('.navigation').addClass('navigation--active');
-    $('.header').addClass('header--active-navigation');
+  const $navigation = $('.navigation');
+  const $header = $('.header');
+  const navigationActive = 'navigation--active';
+  const headerActiveNavigation = 'header--active-navigation'
+
+  function navToggle(navSelector, headerSelector, navClass, headerClass) {
+    navSelector.toggleClass(navClass);
+    headerSelector.toggleClass(headerClass);
+  }
+
+  $('.js-navigation-button-open, .js-navigation-button-close').on('click', function() {
+    navToggle(
+      $navigation,
+      $header,
+      navigationActive,
+      headerActiveNavigation
+    );
   });
 
-  $('.js-navigation-button-close').on('click', function() {
-    $('.navigation').removeClass('navigation--active');
-    $('.header').removeClass('header--active-navigation');
-  });
 });

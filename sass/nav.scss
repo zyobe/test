@@ -1,26 +1,19 @@
-// .__navigation-button
 $backgroundSizeSq: 250px;
 $backgroundSizeReq: 145px;
 
 .navigation {
-  display: none;
-  // align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  border-bottom: 2px solid yellow;
-  // background: #002c5a;
-  
   background: url(#{$asset-path}/insignia-4.svg) #002c5a no-repeat left;
   background-size: contain;
-  
-  // margin-top: -150px;
+  display: none;
+  height: 100vh;
+  left: 0;
   overflow-y: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
   z-index: 2;
-  // overflow-y: hidden;
-  @media screen and (max-width: 767px) {
+  
+  @include mobile-only {
     margin-top: 150px;
   }
 
@@ -29,22 +22,16 @@ $backgroundSizeReq: 145px;
   }
 
   &__links {
-    @media screen and (min-width: 768px) {
-      display: flex;
-      margin-left: 115px;
-      margin-right: 115px;
-      padding: 0;
-      height: 100%;
-      gap: 100px;
+    @include tablet-desktop {
       align-items: center;
+      display: flex;
+      gap: 100px;
+      height: 100%;
+      margin: 0 115px;
+      padding: 0;
     }
     
-    
-    // overflow-y: auto;
-    
-    
-
-    @media screen and (min-width: 768px) {
+    @include tablet-desktop {
       background: 
         url(#{$asset-path}/ASC_5822-8.png),
         url(#{$asset-path}/ASC_5822-7.png),
@@ -102,21 +89,19 @@ $backgroundSizeReq: 145px;
       }
     }
 
-    
-
   &__main-link {
+    color: transparent;
     font-size: 30px;
+    font-weight: 700;
     line-height: 60px;
+    text-decoration: none;
+    white-space: nowrap;
+    -webkit-text-stroke: 1px #fff;
 
-    @media screen and (min-width: 768px) {
+    @include tablet-desktop {
       font-size: 90px;
       line-height: 95px;
     }
-    font-weight: 700;
-    color: transparent;
-    text-decoration: none;
-    -webkit-text-stroke: 1px #fff;
-    white-space: nowrap;
 
     &:hover {
       color: #fff;
@@ -125,41 +110,40 @@ $backgroundSizeReq: 145px;
 
   &__main-link-detail {
     color: #f7f5ec;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 400;
     display: block;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
   }
 
   &__secondary-links {
-    @media screen and (min-width: 768px) {
-      position: fixed;
-      left: 115px;
+    @include tablet-desktop {
       bottom: 5%;
       display: flex;
       gap: 20px;
+      left: 115px;
+      position: fixed;
     }
   }
 
   &__secondary-link {
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 20px;
-    line-height: 20px;
     color: #f7f5ec;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
     text-decoration: none;
+    text-transform: uppercase;
   }
 
   &__social-links {
     display: flex;
     gap: 12px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet-desktop {
+      bottom: 5%;
       position: fixed;
       right: 115px;
-      bottom: 5%;
     }
-  }
 
-  
+  }
 }
