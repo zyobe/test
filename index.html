@@ -24,7 +24,7 @@
         </a>
         <div class="header__interactions">
           <div class="header__search">
-            <button class="header__search-button">
+            <button aria-label="Search" class="header__search-button">
               <span class="sr-only">Search</span>
             </button>
             <form method="post" class="header__search-form">
@@ -35,11 +35,14 @@
             </form>
           </div>
           <div class="header__navigation">
-            <button class="header__navigation-button header__navigation-button--open js-navigation-button-open">
-              <span class="sr-only">Menu</span>
+            <button aria-label="Menu open" class="header__navigation-button header__navigation-button--open js-navigation-button-open">
+              <span class="sr-only">Menu open</span>
               <span>&#9776;</span>
             </button>
-            <button class="header__navigation-button header__navigation-button--close js-navigation-button-close">&#10005;</button>
+            <button aria-label="Menu close" class="header__navigation-button header__navigation-button--close js-navigation-button-close">
+              <span class="sr-only">Menu close</span>
+              <span>&#10005;</span>
+            </button>
           </div>
         </div>
       </div>
@@ -138,9 +141,9 @@
                 <div class="content-inner__left">
                   <div class="content-inner__wrapper">
                     <img src="./assets/DJI_0031.jpg" alt="" class="content-inner__image">
-                    <button class="content-inner__play-button">
+                    <button aria-label="Play" class="content-inner__play-button">
                       <span class="sr-only">Play</span>
-                      <img src="./assets/play.svg" alt="">
+                      <img src="./assets/play.svg" alt="play">
                     </button>
                   </div>
                 </div>
