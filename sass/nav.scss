@@ -1,0 +1,165 @@
+// .__navigation-button
+$backgroundSizeSq: 250px;
+$backgroundSizeReq: 145px;
+
+.navigation {
+  display: none;
+  // align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  border-bottom: 2px solid yellow;
+  // background: #002c5a;
+  
+  background: url(#{$asset-path}/insignia-4.svg) #002c5a no-repeat left;
+  background-size: contain;
+  
+  // margin-top: -150px;
+  overflow-y: auto;
+  z-index: 2;
+  // overflow-y: hidden;
+  @media screen and (max-width: 767px) {
+    margin-top: 150px;
+  }
+
+  &--active {
+    display: block;
+  }
+
+  &__links {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin-left: 115px;
+      margin-right: 115px;
+      padding: 0;
+      height: 100%;
+      gap: 100px;
+      align-items: center;
+    }
+    
+    
+    // overflow-y: auto;
+    
+    
+
+    @media screen and (min-width: 768px) {
+      background: 
+        url(#{$asset-path}/ASC_5822-8.png),
+        url(#{$asset-path}/ASC_5822-7.png),
+        url(#{$asset-path}/ASC_5822-15.png),
+        url(#{$asset-path}/ASC_5822-3.png),
+        url(#{$asset-path}/ASC_5822-11.png),
+        url(#{$asset-path}/ASC_5822-5.png),
+        url(#{$asset-path}/ASC_5822-14.png),
+        url(#{$asset-path}/ASC_5822-9.png),
+        url(#{$asset-path}/ASC_5822.png),
+        url(#{$asset-path}/ASC_5822-2.png),
+        url(#{$asset-path}/ASC_5822-10.png),
+        url(#{$asset-path}/ASC_5822-1.png),
+        url(#{$asset-path}/ASC_5822-12.png),
+        url(#{$asset-path}/ASC_5822-13.png),
+        url(#{$asset-path}/ASC_5822-6.png),
+        url(#{$asset-path}/ASC_5822-4.png);
+      background-repeat: no-repeat;
+      background-position:
+        top left 531px,
+        top left 1556px,
+        top left 2484px,
+        top left 3345px,
+        top left 3867px,
+        top left 4592px,
+        top left 5462px,
+
+        bottom left,
+        bottom left 936px,
+        bottom left 1824px,
+        bottom left 2207px,
+        bottom left 2962px,
+        bottom left 3625px,
+        bottom left 4592px,
+        bottom left 4993px,
+        bottom left 5887px;
+        background-size: 
+          $backgroundSizeSq,
+          $backgroundSizeSq,
+          $backgroundSizeSq,
+          $backgroundSizeReq,
+          $backgroundSizeSq,
+          $backgroundSizeSq,
+          $backgroundSizeSq,
+          $backgroundSizeSq,
+          $backgroundSizeSq,
+          $backgroundSizeReq,
+          $backgroundSizeSq,
+          $backgroundSizeReq,
+          $backgroundSizeSq,
+          $backgroundSizeSq,
+          $backgroundSizeReq,
+          $backgroundSizeReq;
+        width: fit-content;
+      }
+    }
+
+    
+
+  &__main-link {
+    font-size: 30px;
+    line-height: 60px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 90px;
+      line-height: 95px;
+    }
+    font-weight: 700;
+    color: transparent;
+    text-decoration: none;
+    -webkit-text-stroke: 1px #fff;
+    white-space: nowrap;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__main-link-detail {
+    color: #f7f5ec;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    display: block;
+  }
+
+  &__secondary-links {
+    @media screen and (min-width: 768px) {
+      position: fixed;
+      left: 115px;
+      bottom: 5%;
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  &__secondary-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 20px;
+    color: #f7f5ec;
+    text-decoration: none;
+  }
+
+  &__social-links {
+    display: flex;
+    gap: 12px;
+
+    @media screen and (min-width: 768px) {
+      position: fixed;
+      right: 115px;
+      bottom: 5%;
+    }
+  }
+
+  
+}

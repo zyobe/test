@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="12px" viewBox="0 0 10 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Triangle</title>
+    <g id="home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="m-home" transform="translate(-350, -1604)" fill="#FFFFFF">
+            <g id="m-content-home" transform="translate(0, 111)">
+                <g id="link" transform="translate(20, 1474)">
+                    <polygon id="Triangle" transform="translate(335, 25) rotate(90) translate(-335, -25)" points="335 20 341 30 329 30"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,248 @@
+@import "reset";
+@import "variables";
+@import "helpers";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import "components";
+@import "header";
+@import "nav";
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  position: relative;
+  overscroll-behavior: none;
+}
+
+.viewport {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  background-color: purple;
+}
+
+main {
+  // padding-top: 150px;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100vh;
+}
+
+.content {
+  
+  // width: 100vh;
+  // height: 100vw;
+  // transform-origin: top left;
+  // transform: rotate(-90deg) translateX(-100vh);
+  // overflow-y: scroll;
+
+  
+
+  &__section {
+    // height: 100vh;
+    // width: 100vw;
+  }
+
+  
+
+  &__sections {
+    // width: 100vw;
+    // transform-origin: top left;
+    // transform: rotate(90deg) translateY(-100vh);
+  }
+
+  // &__sections--parallax {
+  //   position: relative;
+  //   min-height: 75vh;
+  //   display: grid;
+  //   grid-template-areas: "stack";
+  // }
+
+  // &__sections--parallax > * {
+  //   animation: parallax linear;
+  //   animation-timeline: scroll();
+  //   grid-area: stack;
+  // }
+
+  // &__section--parallax {
+  //   grid-area: stack;
+  // }
+
+  // &__sections--parallax {
+  //   position: relative;
+  //   top: 100vh;
+  //   left: 0;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   transform-origin: top left;
+  //   transform: rotate(-90deg);
+  //   overflow-x: hidden;
+  //   overflow-y: scroll;
+  //   // perspective-origin: 50% 50% 0;
+  //   perspective-origin: center;
+  //   perspective: 3px;
+
+  //   &::-webkit-scrollbar {
+  //     display: none;
+  //   }
+  // }
+
+  // &__section--parallax {
+  //   position: absolute;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   overflow: hidden;
+  //   z-index: 1;
+  // }
+
+  // &__wrapper {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   width: 100vw;
+  //   padding: 0 (100vw * 3);
+  //   transform-origin: 50% 50% 0;
+  //   transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(1.666) rotate(90deg);
+  // }
+
+  &__wrapper {
+    
+  }
+}
+
+
+.statement {
+  align-items: center;
+  // background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  max-width: 1250px;
+  padding: 0 20px;
+
+  &__intro {
+    // background-color: pink;
+    color: #696969;
+    font-size: 16px;
+    line-height: 24px;
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    font-style: italic;
+    font-weight: 400;
+    
+    max-width: 610px;
+    margin-top: 40px;
+    padding: 0 20px;
+    @media screen and (min-width: 768px) {
+      margin-top: 90px;
+    }
+
+    width: 100%;
+  }
+
+  &__heading {
+    // background-color: teal;
+    color: #dd041e;
+    font-size: 30px;
+    line-height: 35px;
+    @media screen and (min-width: 768px) {
+      font-size: 100px;
+      line-height: 99px;
+    }
+    font-weight: 900;
+    max-width: 1250px;
+    margin-top: 42px;
+    width: 100%;
+  }
+}
+
+.content-inner {
+  // margin-top: -140px;
+  
+
+  @media screen and (min-width: 768px) {
+    
+  }
+
+  &--split {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+  
+  &--full {
+    max-width: 850px;
+    width: 100%;
+    padding: 20px;
+  }
+
+  &--shift {
+    margin-top: -50px;
+
+    @media screen and (min-width: 768px) {
+    
+    }
+  }
+
+  &__left {
+    background-color: peachpuff;
+    // width: 1145px;
+  }
+
+  &__right {
+    background-color: hotpink;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__heading {
+    font-weight: 900;
+    font-size: 25px;
+    color: #dd041e;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    color: #696969;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+// @keyframes parallax {
+//   to {
+//     transform: translateY(1000px);
+//   }
+// }
+
+// $primary-color: #24a0ed;
+
+// h1 {
+//   color: $primary-color;
+// }
+
+// button {
+//   color: #fff;
+//   background-color: $primary-color;
+//   border: none;
+//   padding: 10px 20px;
+//   border-radius: 15px;
+
+//   &:hover{
+//     color: $primary-color;
+//     background-color: #ffff;
+//     border: 1px solid $primary-color;
+//   }
+// }
